@@ -35,6 +35,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.2', '>= 4.2.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
 gem 'cancancan', '~> 1.16'
+gem 'wysiwyg-rails'
+gem 'toastr-rails'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
