@@ -4,7 +4,6 @@ class NotesController < ApplicationController
   def index
     # TODO: Colocar filtros
     @notes = current_user.notes + current_user.guest_notes
-    render :json => @notes.to_json(:include => [:users, :tags])
   end
 
   def show
@@ -23,7 +22,7 @@ class NotesController < ApplicationController
 
   def update
     if @note.update(note_params)
-      render json: {message: "Nota  atualizada com sucesso!"}, status: :ok
+      render json: {message: "Nota atualizada com sucesso!"}, status: :ok
     else
       render json: {message: "Falha ao atualizar nota!"}, status: :unprocessable_entity
     end
